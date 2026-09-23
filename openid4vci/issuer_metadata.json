@@ -1,0 +1,241 @@
+{
+  "batch_credential_issuance": {
+    "batch_size": 100
+  },
+  "client_attestation_pop_signing_alg_values_supported": [
+    "ES256",
+    "ES384",
+    "ES512"
+  ],
+  "client_attestation_signing_alg_values_supported": [
+    "ES256",
+    "ES384",
+    "ES512"
+  ],
+  "credential_configurations_supported": {
+    "eu.europa.ec.eudi.pid_digimaks_pid_mdoc": {
+      "credential_alg_values_supported": [-7],
+      "credential_crv_values_supported": [1],
+      "credential_metadata": {
+        "claims": [
+          {
+            "display": [
+              {"locale": "en", "name": "Family Name(s)"},
+              {"locale": "lv", "name": "Uzvārds"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "family_name"],
+            "value_type": "string"
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Given Name(s)"},
+              {"locale": "lv", "name": "Vārds"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "given_name"],
+            "value_type": "string"
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Personal Identification Number"},
+              {"locale": "lv", "name": "Personas kods"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "personal_administrative_number"],
+            "value_type": "string"
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Issuance Date"},
+              {"locale": "lv", "name": "Izsniegšanas datums"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "issuance_date"]
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Expiry Date"},
+              {"locale": "lv", "name": "Derīguma termiņš"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "expiry_date"]
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Issuance Authority"},
+              {"locale": "lv", "name": "Datu izdevējs"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "issuing_authority"]
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Issuing Country"},
+              {"locale": "lv", "name": "PID sniedzēja valsts"}
+            ],
+            "mandatory": true,
+            "path": ["eu.europa.ec.eudi.pid.1", "issuing_country"]
+          }
+        ],
+        "display": [
+          {
+            "locale": "en",
+            "logo": {
+              "alt_text": "A square figure of a PID",
+              "url": "https://examplestate.com/public/pid.png"
+            },
+            "name": "PID"
+          },
+          {
+            "locale": "lv",
+            "logo": {
+              "alt_text": "Personas identifikācijas dati",
+              "url": "https://examplestate.com/public/pid.png"
+            },
+            "name": "PID"
+          }
+        ]
+      },
+      "cryptographic_binding_methods_supported": ["jwk", "cose_key"],
+      "doctype": "eu.europa.ec.eudi.pid.1",
+      "format": "mso_mdoc",
+      "policy": {
+        "batch_size": 50,
+        "one_time_use": true
+      },
+      "proof_types_supported": {
+        "jwt": {
+          "key_attestations_required": {
+            "key_storage": ["iso_18045_high"]
+          },
+          "proof_signing_alg_values_supported": ["ES256"]
+        },
+        "cwt": {
+          "proof_alg_values_supported": [-7],
+          "proof_crv_values_supported": [1],
+          "proof_signing_alg_values_supported": ["ES256"]
+        },
+        "attestation": {
+          "key_attestations_required": {
+            "key_storage": ["iso_18045_high"]
+          },
+          "proof_signing_alg_values_supported": ["ES256"]
+        }
+      },
+      "scope": "eu.europa.ec.eudi.pid_mdoc"
+    },
+    "eu.europa.ec.eudi.pid_digimaks_vc_sd_jwt": {
+      "credential_metadata": {
+        "claims": [
+          {
+            "display": [
+              {"locale": "en", "name": "Family Name(s)"},
+              {"locale": "lv", "name": "Uzvārds"}
+            ],
+            "mandatory": true,
+            "path": ["family_name"],
+            "value_type": "string"
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Given Name(s)"},
+              {"locale": "lv", "name": "Vārds"}
+            ],
+            "mandatory": true,
+            "path": ["given_name"],
+            "value_type": "string"
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Personal Identification Number"},
+              {"locale": "lv", "name": "Personas kods"}
+            ],
+            "mandatory": false,
+            "path": ["personal_administrative_number"],
+            "value_type": "string"
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Issuance Date"},
+              {"locale": "lv", "name": "Izsniegšanas datums"}
+            ],
+            "mandatory": true,
+            "path": ["issuance_date"]
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Expiry Date"},
+              {"locale": "lv", "name": "Derīguma termiņš"}
+            ],
+            "mandatory": true,
+            "path": ["expiry_date"]
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Issuance Authority"},
+              {"locale": "lv", "name": "Datu izdevējs"}
+            ],
+            "mandatory": true,
+            "path": ["issuing_authority"]
+          },
+          {
+            "display": [
+              {"locale": "en", "name": "Issuing Country"},
+              {"locale": "lv", "name": "PID sniedzēja valsts"}
+            ],
+            "mandatory": true,
+            "path": ["issuing_country"]
+          }
+        ],
+        "display": [
+          {
+            "locale": "en",
+            "logo": {
+              "alt_text": "A square figure of a PID",
+              "uri": "https://examplestate.com/public/pid.png"
+            },
+            "name": "PID"
+          },
+          {
+            "locale": "lv",
+            "logo": {
+              "alt_text": "Personas identifikācijas dati",
+              "url": "https://examplestate.com/public/pid.png"
+            },
+            "name": "PID"
+          }
+        ]
+      },
+      "credential_signing_alg_values_supported": ["ES256"],
+      "cryptographic_binding_methods_supported": ["jwk", "cose_key"],
+      "format": "dc+sd-jwt",
+      "proof_types_supported": {
+        "jwt": {
+          "key_attestations_required": {
+            "key_storage": ["iso_18045_high"]
+          },
+          "proof_signing_alg_values_supported": ["ES256"]
+        },
+        "attestation": {
+          "key_attestations_required": {
+            "key_storage": ["iso_18045_high"]
+          },
+          "proof_signing_alg_values_supported": ["ES256"]
+        }
+      },
+      "scope": "eu.europa.ec.eudi.pid_vc_sd_jwt",
+      "vct": "urn:eudi:pid:1"
+    }
+  },
+  "display": [
+    {
+      "locale": "en",
+      "logo": {
+        "alt_text": "EU Digital Identity Wallet Logo",
+        "uri": "https://examplestate.com/public/pid.png"
+      },
+      "name": "Digital Credentials Issuer"
+    }
+  ]
+}
