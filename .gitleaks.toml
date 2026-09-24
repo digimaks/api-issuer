@@ -1,0 +1,7 @@
+title = "gitleaks config"
+
+[allowlist]
+description = "Test-only fixtures, not production secrets"
+paths = [
+  '''testing\.go''',
+]

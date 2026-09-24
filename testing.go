@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
+//go:build testing
+
 package issuer
 
 import (
